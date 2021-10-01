@@ -6,6 +6,7 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+import csv
 import sys
 import fire
 import questionary
@@ -96,20 +97,49 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     bank_data_filtered = filter_credit_score(credit_score, bank_data_filtered)
     bank_data_filtered = filter_debt_to_income(monthly_debt_ratio, bank_data_filtered)
     bank_data_filtered = filter_loan_to_value(loan_to_value_ratio, bank_data_filtered)
-
     print(f"Found {len(bank_data_filtered)} qualifying loans")
-    print(bank_data_filtered)
+    
+
+    
 
     return bank_data_filtered
 
 
+
 def save_qualifying_loans(qualifying_loans):
+ 
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
+    header = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit Score', 'Interest Rate']
+
+ 
+
+
+    # @TODO: Use the csv library and `csv.writer` to write the header row
+    # and each row of `loan.values()` from the `inexpensive_loans` list.
+    if len(qualifying_loans) > 0:
+        
+        save_loans = questionary.text("would you like to save the qualifying loans? (y/n)").ask()
+        if save_loans.lower() == "y":
+            output_path = Path(questionary.text("Where would you like to save the file?").ask())
+            with open (output_path, "w", newline='') as csvfile:
+                csvwriter = csv.writer(csvfile, delimiter=",")
+                csvwriter.writerow(header)
+                for loan in qualifying_loans:
+                    csvwriter.writerow(loan)
+            
+        else:
+            return
+    else: 
+        print("found no loans, goodbye")
+        return
+    
+
+
     
 
 
