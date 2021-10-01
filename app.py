@@ -133,7 +133,7 @@ def save_qualifying_loans(qualifying_loans):
                     csvwriter.writerow(loan)
             
         else:
-            return
+            print("thanks for using our loan qualifier app!")
     else: 
         print("found no loans, goodbye")
         return
