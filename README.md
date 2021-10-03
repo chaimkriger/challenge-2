@@ -15,22 +15,33 @@ This project leverages python 3.7 with the following packages:
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application the following must be installed.
 
----
+
+```python
+  pip install fire
+  pip install questionary
+```
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To use the loan qualifier application simply clone the repository and run the **app.py** with:
+
+```python
+python app.py
+```
+First, the user will be asked to enter a file path to a rate-sheet. The user should then input './data_daly_rate_sheet.csv'.
+Then, the user will be asked a serious of questions to evaluate the user's loan eligibility.
+If the user qualifies for loans, the user will be prompted to save the list of qualifying loans. If not, the user will be thanked for using the app.
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+just me, myself, and a little help from the ReadMe section in Module 2.
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+None, feel free to copy the code and use anytime!
