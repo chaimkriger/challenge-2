@@ -32,7 +32,8 @@ python app.py
 ```
 First, the user will be asked to enter a file path to a rate-sheet. The user should then input './data_daly_rate_sheet.csv'.
 Then, the user will be asked a serious of questions to evaluate the user's loan eligibility.
-If the user qualifies for loans, the user will be prompted to save the list of qualifying loans. If not, the user will be thanked for using the app.
+If the user qualifies for loans, the user will be prompted to save the list of qualifying loans. If the user does not want to save the list, the user will be thanked for using the app.
+If the user qualifies for no loans, the app will close.
 
 ---
 
