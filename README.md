@@ -1,12 +1,15 @@
-# Project Title
+# Loan Qualifier Application
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
-
+This is a python command line interface program that allows users to plug in various kinds of information to evaluate their loan eligibility. The application will match the user data against a list of bank loans from 'daily_rate_sheet' and return to the user a list of loans that they qualify for. Then, the user will have the ability to save that list, or to leave the application.
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This project leverages python 3.7 with the following packages:
+
+* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+
+* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
 ---
 
